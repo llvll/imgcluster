@@ -32,7 +32,7 @@ from matplotlib import pyplot as plt
 DIR_NAME = 'images'
 
 # Demo for clustering a set of 20 images using 'imgcluster' module.
-# To be executed in IP[y] Notebook by default.
+# To be executed in the standalone mode by default. IP[y] Notebook requires some minor adjustments.
 
 """ True (reference) labels for the provided images - defined manually according to the semantic meaning of images.
     For example: bear, raccoon and fox should belong to the same cluster.
@@ -52,5 +52,6 @@ if __name__ == "__main__":
         for i in np.argwhere(c == n):
             if i != -1:
                 print("Image %s" % images[i])
-                plt.imshow(cv2.imread('%s/%s' % (DIR_NAME, images[i])).astype("float"))
+                plt.imshow(cv2.imread('%s/%s' % (DIR_NAME, images[i])))
+
 

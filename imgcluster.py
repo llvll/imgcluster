@@ -150,7 +150,6 @@ def get_cluster_metrics(X, labels, labels_true=None):
 """
 def do_cluster(dir_name, algorithm='SIFT', print_metrics=True, labels_true=None):
     matrix = build_similarity_matrix(dir_name, algorithm=algorithm)
-    print(matrix)
 
     sc = SpectralClustering(n_clusters=int(matrix.shape[0]/IMAGES_PER_CLUSTER), affinity='precomputed').fit(matrix)
     sc_metrics = get_cluster_metrics(matrix, sc.labels_, labels_true)
