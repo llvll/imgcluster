@@ -16,7 +16,7 @@ The best clustering results are selected according to the calculated performance
 
 IPython Notebook (.ipynb file) is included for step-by-step execution of the demo application with extra comments.
 
-The project is using *OpenCV 3.1*, *Scikit-Learn*, *Scikit-Image* and *PySSIM* for image manipulations and similarity measurements. 
+The project is using *OpenCV 3.1*, *Scikit-Learn*, *Scikit-Image* and *PySSIM* for image manipulations, similarity measurements and clustering.
 
 All images have been downloaded from the free-of-charge online service Pixabay: https://pixabay.com
 
@@ -24,5 +24,4 @@ Any kind of copyrights, ownership rights or distribution rights have been consid
 is available on Pixabay.
 
 Please feel free to ask any questions: oleg.v.puzanov@gmail.com
-
 
