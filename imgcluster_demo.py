@@ -44,7 +44,6 @@ if __name__ == "__main__":
     c = imgcluster.do_cluster(DIR_NAME, algorithm='SIFT', print_metrics=True, labels_true=TRUE_LABELS)
     num_clusters = len(set(c))
     images = os.listdir(DIR_NAME)
-    plt.axis('off')
 
     for n in range(num_clusters):
         print("\n --- Images from cluster #%d ---" % n)
@@ -52,6 +51,11 @@ if __name__ == "__main__":
         for i in np.argwhere(c == n):
             if i != -1:
                 print("Image %s" % images[i])
-                plt.imshow(cv2.imread('%s/%s' % (DIR_NAME, images[i])))
+                img = cv2.imread('%s/%s' % (DIR_NAME, images[i]))
+                plt.axis('off')
+                plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+                plt.show()
+
+
 
 
