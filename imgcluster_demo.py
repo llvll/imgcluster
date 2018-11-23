@@ -50,8 +50,8 @@ if __name__ == "__main__":
 
         for i in np.argwhere(c == n):
             if i != -1:
-                print("Image %s" % images[i])
-                img = cv2.imread('%s/%s' % (DIR_NAME, images[i]))
+                print("Image %s" % images[int(i)])
+                img = cv2.imread('%s/%s' % (DIR_NAME, images[int(i)]))
                 plt.axis('off')
                 plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
                 plt.show()

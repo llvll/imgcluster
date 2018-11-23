@@ -28,7 +28,7 @@ import datetime
 import cv2
 import numpy as np
 import ssim.ssimlib as pyssim
-from skimage.measure import structural_similarity as ssim
+from skimage.measure._structural_similarity import compare_ssim as ssim
 from sklearn.cluster import SpectralClustering, AffinityPropagation
 from sklearn import metrics
 
